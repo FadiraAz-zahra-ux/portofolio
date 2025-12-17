@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio Sederhana</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  background:#f2f2f2;
+}
+nav{
+  background:#f900ae;
+  padding:10px;
+  text-align:center;
+}
+nav button{
+  background:none;
+  border:none;
+  color:white;
+  margin:0 8px;
+  font-size:16px;
+  cursor:pointer;
+}
+section{
+  display:none;
+  padding:30px;
+  max-width:800px;
+  margin:auto;
+}
+.active{
+  display:block;
+}
+.box{
+  background:white;
+  padding:15px;
+  margin:10px 0;
+  border-radius:6px;
+}
+footer{
+  text-align:center;
+  background:#f900ae;
+  color:white;
+  padding:10px;
+}
+img{
+  display:block;
+  margin:auto;
+  width:180px;
+  border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <button onclick="showPage('home')">Home</button>
+  <button onclick="showPage('about')">About</button>
+  <button onclick="showPage('skills')">Skills</button>
+  <button onclick="showPage('contact')">Contact</button>
+</nav>
+
+<section id="home" class="active">
+  <h1 style="text-align:center;">Fadira Az-zahra</h1>
+  <p style="text-align:center;">Mahasiswa Ilmu Perpustakaan & Informasi Islam Angkatan 2022 </p>
+  <img src="fotofadira.jpeg" alt="Foto">
+</section>
+
+<section id="about">
+  <h2>Tentang Saya</h2>
+  <div class="box">
+  <p style="text-align: justify;"> Fadira Az-zahra, bisa dipanggil Fira lahir dikota Padang tanggal 20 Desember 2003. Sekarang tinggal di Kota Padang, Provinsi Sumatera Barat. Anak kedua dari empat bersaudara. Fadira Az-zahra telah menyelesaikan pendidikan di SDIT Adzkia, MTsN Model Padang, MAN 2 Padang. Pada tahun 2022 Fadira Az-zahra melanjutkan pendidikan di Universitas Islam Negeri (UIN) Imam Bonjol Padang dengan jurusan Ilmu Perpustakaan dan Informasi Islam, Fakultas Adab dan Humaniora </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="box">Desain Grafis</div>
+  <div class="box">Public Speaking</div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="box">Email: fadira201203@gmail.com</div>
+  <div class="box">WhatsApp: 089623013330</div>
+</section>
+
+<footer>© 2025 Fadira Az-zahra</footer>
+
+<script>
+function showPage(id){
+  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+</script>
+
+</body>
+</html>
